@@ -1,0 +1,27 @@
+:root {
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  --block-space: 1.25rem;
+  --inline-space: 0.5rem
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: var(--block-space);
+  min-height: 80vh;
+}
+
+.p-button svg {
+  height: var(--p-icon-size);
+  width: var(--p-icon-size);
+  flex-shrink: 0;
+}
+
+.p-toast-detail {
+  display: none;
+}
