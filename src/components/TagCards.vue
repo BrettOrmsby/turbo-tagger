@@ -50,7 +50,11 @@
         <Popover ref="tagPopover" style="min-width: 200px">
           <label for="addGlobalTag">Add Global Tag</label>
           <InputGroup>
-            <InputText v-model="addGlobalTagText" inputId="addGlobalTag" />
+            <InputText
+              v-model="addGlobalTagText"
+              inputId="addGlobalTag"
+              @keydown.enter="addGlobalTag"
+            />
             <Button aria-label="Add Tag" @click="addGlobalTag">
               <template #icon="iconClass">
                 <PlusIcon :class="iconClass.class" />
@@ -59,7 +63,11 @@
           </InputGroup>
           <label for="addDeckSpecificTag">Add Deck Specific Tag</label>
           <InputGroup>
-            <InputText v-model="addDeckSpecificTagText" inputId="addDeckSpecificTag" />
+            <InputText
+              v-model="addDeckSpecificTagText"
+              inputId="addDeckSpecificTag"
+              @keydown.enter="addDeckSpecificTag"
+            />
             <Button aria-label="Add Tag" @click="addDeckSpecificTag">
               <template #icon="iconClass">
                 <PlusIcon :class="iconClass.class" />
