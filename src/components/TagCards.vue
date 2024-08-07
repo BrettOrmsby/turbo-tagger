@@ -387,15 +387,27 @@ label {
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 550px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 700px) {
   .card-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 850px) {
   .card-container {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
 </style>
