@@ -1,10 +1,12 @@
 <template>
-  <span>Deck:</span>
-  <pre class="p-textarea">{{ deckText }}</pre>
+  <div class="container">
+    <span>Deck:</span>
+    <pre class="p-textarea">{{ deckText }}</pre>
 
-  <Button label="Back" @click="goBack" severity="secondary" />
-  <Button label="Start Over" @click="startOver" severity="secondary" />
-  <Button label="Copy Deck" @click="copyDeck" />
+    <Button label="Back" @click="goBack" severity="secondary" />
+    <Button label="Start Over" @click="startOver" severity="secondary" />
+    <Button label="Copy Deck" @click="copyDeck" />
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -48,15 +50,8 @@ const startOver = () => {
   confirm.require({
     message: 'You will not be able to copy your changes.',
     header: 'Are you sure you want to start over?',
-    rejectProps: {
-      label: 'Cancel',
-      severity: 'secondary',
-      outlined: true
-    },
-    acceptProps: {
-      label: 'Start Over',
-      severity: 'danger'
-    },
+    rejectProps: { label: 'Cancel', severity: 'secondary', outlined: true },
+    acceptProps: { label: 'Start Over', severity: 'danger' },
     accept: () => {
       props.navigateTo('1')
     }
@@ -65,6 +60,10 @@ const startOver = () => {
 </script>
 
 <style scoped>
+.container {
+  padding: var(--block-space);
+}
+
 span {
   margin-bottom: var(--inline-space);
   display: block;

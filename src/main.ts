@@ -5,8 +5,8 @@ import PrimeVue from 'primevue/config'
 import App from './App.vue'
 import ToastService from 'primevue/toastservice'
 import ConfirmationService from 'primevue/confirmationservice'
-import { definePreset } from '@primevue/themes'
-import Aura from '@primevue/themes/aura'
+import { definePreset } from '@primeuix/themes'
+import Aura from '@primeuix/themes/aura'
 
 const app = createApp(App)
 
@@ -60,13 +60,6 @@ const preset = definePreset(Aura, {
     }
   }
 })
-app.use(PrimeVue, {
-  theme: {
-    preset: preset,
-    options: {
-      darkModeSelector: '.app-dark'
-    }
-  }
-})
+app.use(PrimeVue, { theme: { preset: preset, options: { darkModeSelector: '.app-dark' } } })
 
 app.mount('#app')

@@ -13,7 +13,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@primevue/themes": "^4.0.4",
+    "@primeuix/themes": "^2.0.3",
     "@vueuse/core": "^10.11.0",
     "lucide-vue-next": "^0.424.0",
     "primevue": "^4.0.4",
